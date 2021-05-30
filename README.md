@@ -8,6 +8,12 @@ discord.py module. </br>
 
 you can install it from requirements.txt file. </br>
 
+# Commands 
+
+.help -> Help. </br>
+.link -> Gives you the links. </br>
+.next -> Gives you information about the next Article Number. </br>
+
 # Set-up instructions
 A Discord bot which will give 4 GFG C++ links once every day. </br>
 

@@ -5,12 +5,16 @@ client = discord.Client()
 
 def get_curr():
     with open('curr.txt', 'r') as c:
-        curr = int(c.read())
+        curr = int(c.read().split('$')[0])
     return curr
+
+def get_today():
+    with open('curr.txt', 'r') as c:
+        return int(c.read().split('$')[-1])
 
 def update_curr(curr):
     with open('curr.txt', 'w') as c:
-        c.write(str(curr))
+        c.write(f'{curr}${curr-4}')
 
 def check_time():
     import time
@@ -41,6 +45,11 @@ def get_item(curr):
     message = f'Article number: {curr + 1}\n\nTopic: {TODAY[0]}\n\nLink: {TODAY[1]}\n\n@everyone'
     return message
 
+def get_single_item(curr):
+    LINES = read_data_from_file()
+    TODAY = LINES[curr].split('$')
+    message = f'Article number: {curr + 1}\n\nTopic: {TODAY[0]}\n\nLink: {TODAY[1]}\n\n'
+    return message
 
 @client.event
 async def on_ready():
@@ -53,7 +62,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('.help'):
-        reply = '.help -> Help\n.link -> To get today\'s links\n.next -> To get the Article Number of next article.'
+        reply = '.help -> Help\n.link -> To get today\'s links [Works only once and tags everyone]\n.next -> To get the Article Number of next article\n.today -> To get today\'s links\n.get <number> -> get the specified article number'
         await message.channel.send(reply)
 
     if message.content.startswith('.link'):
@@ -68,7 +77,16 @@ async def on_message(message):
     if message.content.startswith('.next'):
         await message.channel.send(f'Next article is Article Number {get_curr()+1}')
 
+    if message.content.startswith('.today'):
+        t = get_today()
+        for i in range(t, t+4):
+            reply = get_single_item(i)
+            await message.channel.send(reply)
 
+    if message.content.startswith('.get'):
+        t = int(message.content.split(' ')[-1])
+        reply = get_single_item(t-1)
+        await message.channel.send(reply)
         
 
 client.run('YOUR TOKEN HERE')

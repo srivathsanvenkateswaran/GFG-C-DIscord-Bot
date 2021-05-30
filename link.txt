@@ -4,7 +4,7 @@ void main or main()$http://www.geeksforgeeks.org/fine-write-void-main-cc/
 C++ Data Types(Practice)$http://www.geeksforgeeks.org/c-data-types/
 Basic Input/Output$http://www.geeksforgeeks.org/basic-input-output-c/
 Response on exceeding valid range of data types$https://www.geeksforgeeks.org/happen-exceed-valid-range-built-data-types-c/
-C++ PreprocessorsOperators in C++(Practice)Loops (Practice)Decision Making in C++(Practice)Execute both if and else simultaneouslyHow to compile 32-bit program on 64-bit gcc in C and C++Switch statement in C++(Practice)Functions in C++(Practice)Arrays in C/C++(Practice)Strings in C++(Practice)Pointers in C++(Practice)References in C++Introduction to OOP in C++$http://www.geeksforgeeks.org/cc-preprocessors/
+C++ Preprocessors$http://www.geeksforgeeks.org/cc-preprocessors/
 Operators in C++(Practice)$http://www.geeksforgeeks.org/operators-c-c/
 Loops (Practice)$http://www.geeksforgeeks.org/loops-in-c
 Decision Making in C++(Practice)$http://www.geeksforgeeks.org/decision-making-c-c-else-nested-else/
@@ -74,7 +74,7 @@ Split a string in C/C++, Python and Java$http://www.geeksforgeeks.org/how-to-spl
 Stringstream in C++ and its applications$https://www.geeksforgeeks.org/stringstream-c-applications/
 Strchr() function in C/C++$https://www.geeksforgeeks.org/strchr-function-in-cpp/
 Isspace() in C/C++ and its application to count whitespace characters$https://www.geeksforgeeks.org/isspace-in-c-and-its-application-to-count-whitespace-characters/
-Char* vs std:string vs char[] in C++Std::lexicographical_compare() in C++STLStd::string::at in C++Std::substr() in C/C++std::stol() and std::stoll() functions in C++Extract all integers from string in C++Strchr() function in C++ and its applicationsStrcat() vs strncat() in C++Strncat() function in C/C++Strpbrk() in Cstrcoll() in C/C++Why strcpy and strncpy are not safe to use?$https://www.geeksforgeeks.org/char-vs-stdstring-vs-char-c/
+Char* vs std:string vs char[] in C++$https://www.geeksforgeeks.org/char-vs-stdstring-vs-char-c/
 Std::lexicographical_compare() in C++STL$https://www.geeksforgeeks.org/stdlexicographical_compare-in-cstl/
 Std::string::at in C++$https://www.geeksforgeeks.org/stdstringat-in-c/
 Std::substr() in C/C++$https://www.geeksforgeeks.org/stdsubstr-in-ccpp/

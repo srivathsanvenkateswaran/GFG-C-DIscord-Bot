@@ -62,7 +62,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('.help'):
-        reply = '.help -> Help\n.link -> To get today\'s links [Works only once and tags everyone]\n.next -> To get the Article Number of next article\n.today -> To get today\'s links\n.get <number> -> get the specified article number'
+        reply = '.help -> Help\n.link -> To get today\'s links [Works only once and tags everyone]\n.next -> To get the Article Number of next article\n.today -> To get today\'s links\n.get <number> -> get the specified article number[1 - 439]'
         await message.channel.send(reply)
 
     if message.content.startswith('.link'):
@@ -84,8 +84,11 @@ async def on_message(message):
             await message.channel.send(reply)
 
     if message.content.startswith('.get'):
-        t = int(message.content.split(' ')[-1])
-        reply = get_single_item(t-1)
+        try:
+            t = int(message.content.split(' ')[-1])
+            reply = get_single_item(t-1)
+        except:
+            reply = 'Please enter a valid Integer between 1 to 439'
         await message.channel.send(reply)
         
 

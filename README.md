@@ -11,8 +11,10 @@ you can install it from requirements.txt file. </br>
 # Commands 
 
 .help -> Help. </br>
-.link -> Gives you the links. </br>
+.link -> Gives you the links. [This works only once and also tags everyone]</br>
 .next -> Gives you information about the next Article Number. </br>
+.today -> Gives you the links for the particular day. </br>
+.get (number) -> Gives you the article specified by number. </br>
 
 # Set-up instructions
 A Discord bot which will give 4 GFG C++ links once every day. </br>

@@ -3,6 +3,8 @@ import os
 
 client = discord.Client()
 
+incrementor = 4
+
 def get_curr():
     with open('curr.txt', 'r') as c:
         curr = int(c.read().split('$')[0])
@@ -14,7 +16,7 @@ def get_today():
 
 def update_curr(curr):
     with open('curr.txt', 'w') as c:
-        c.write(f'{curr}${curr-4}')
+        c.write(f'{curr}${curr-incrementor}')
 
 def check_time():
     import time
@@ -68,7 +70,7 @@ async def on_message(message):
     if message.content.startswith('.link'):
         if check_time():
             curr = get_curr()
-            for i in range(0, 4):
+            for i in range(0, incrementor):
                 reply = get_item(curr+i)
                 await message.channel.send(reply)
         else:
@@ -79,7 +81,7 @@ async def on_message(message):
 
     if message.content.startswith('.today'):
         t = get_today()
-        for i in range(t, t+4):
+        for i in range(t, t+incrementor):
             reply = get_single_item(i)
             await message.channel.send(reply)
 

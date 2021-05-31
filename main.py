@@ -19,7 +19,7 @@ def update_curr(curr):
 def check_time():
     import time
 
-    modification_time = os.path.getmtime('link.txt')
+    modification_time = os.path.getmtime('curr.txt')
     mt = time.ctime(modification_time)
     time_obj = time.strptime(mt)
     modification_stamp = time.strftime("%d", time_obj)
